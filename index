@@ -1,0 +1,3368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholar's Camp | Chemistry CBT: Matter and Separation Techniques</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --success-color: #2ecc71;
+            --warning-color: #f39c12;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --border-radius: 8px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 10px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        
+        /* Header Styles */
+        .header {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo {
+            width: 60px;
+            height: 60px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .branding h1 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        
+        .branding p {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        .user-info {
+            background-color: var(--light-color);
+            padding: 10px 15px;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+        }
+        
+        /* Login Screen */
+        .login-screen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+        }
+        
+        .login-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 40px;
+            width: 100%;
+            max-width: 450px;
+        }
+        
+        .login-card h2 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: var(--secondary-color);
+            outline: none;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary-color);
+        }
+        
+        .btn-success {
+            background-color: var(--success-color);
+        }
+        
+        .btn-warning {
+            background-color: var(--warning-color);
+        }
+        
+        .btn-danger {
+            background-color: var(--accent-color);
+        }
+        
+        .btn-small {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+        }
+        
+        /* Exam Info Card */
+        .exam-info {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .exam-info h2 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .info-item {
+            background-color: var(--light-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+        }
+        
+        .info-label {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-bottom: 5px;
+        }
+        
+        .info-value {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+        
+        /* Timer */
+        .timer-container {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .timer {
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin: 10px 0;
+        }
+        
+        .timer-warning {
+            color: var(--warning-color);
+        }
+        
+        .timer-danger {
+            color: var(--accent-color);
+        }
+        
+        /* Question Container */
+        .question-container {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 25px;
+            margin-bottom: 20px;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .question-number {
+            background-color: var(--secondary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .question-text {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            flex-grow: 1;
+        }
+        
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .option {
+            background-color: var(--light-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 2px solid transparent;
+        }
+        
+        .option:hover {
+            background-color: #e0e6ea;
+        }
+        
+        .option.selected {
+            border-color: var(--secondary-color);
+            background-color: rgba(52, 152, 219, 0.1);
+        }
+        
+        .option.correct {
+            border-color: var(--success-color);
+            background-color: rgba(46, 204, 113, 0.1);
+        }
+        
+        .option.incorrect {
+            border-color: var(--accent-color);
+            background-color: rgba(231, 76, 60, 0.1);
+        }
+        
+        /* Navigation */
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        
+        .nav-btn {
+            padding: 10px 20px;
+            min-width: 120px;
+        }
+        
+        .question-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .question-indicator {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .question-indicator:hover {
+            background-color: #ddd;
+        }
+        
+        .question-indicator.answered {
+            background-color: var(--success-color);
+            color: white;
+        }
+        
+        .question-indicator.current {
+            background-color: var(--secondary-color);
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        /* Results Screen */
+        .results-screen {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .results-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .results-header h2 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .score-display {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin: 20px 0;
+        }
+        
+        .score-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .summary-item {
+            background-color: var(--light-color);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+        
+        .summary-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .summary-label {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        .review-container {
+            margin-top: 30px;
+        }
+        
+        .review-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+        }
+        
+        .filter-controls {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .review-question {
+            background-color: var(--light-color);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+            border-left: 5px solid #ddd;
+        }
+        
+        .review-question.correct {
+            border-left-color: var(--success-color);
+        }
+        
+        .review-question.incorrect {
+            border-left-color: var(--accent-color);
+        }
+        
+        .review-question.unanswered {
+            border-left-color: var(--warning-color);
+        }
+        
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+        
+        /* Security Overlay */
+        .security-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* Review Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .page-btn {
+            padding: 8px 12px;
+            background-color: var(--light-color);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            min-width: 40px;
+        }
+        
+        .page-btn.active {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .page-btn:hover:not(.active) {
+            background-color: #ddd;
+        }
+        
+        .review-stats {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            padding: 10px 15px;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+        }
+        
+        .stat-correct {
+            background-color: rgba(46, 204, 113, 0.2);
+            color: var(--success-color);
+        }
+        
+        .stat-incorrect {
+            background-color: rgba(231, 76, 60, 0.2);
+            color: var(--accent-color);
+        }
+        
+        .stat-unanswered {
+            background-color: rgba(243, 156, 18, 0.2);
+            color: var(--warning-color);
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .logo-section {
+                justify-content: center;
+            }
+            
+            .question-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .navigation {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-btn {
+                width: 100%;
+            }
+            
+            .login-card {
+                padding: 25px;
+            }
+            
+            .review-controls {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .branding h1 {
+                font-size: 1.4rem;
+            }
+            
+            .timer {
+                font-size: 1.5rem;
+            }
+            
+            .score-display {
+                font-size: 2.5rem;
+            }
+            
+            .review-header {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+        
+        /* Utility Classes */
+        .hidden {
+            display: none !important;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .mb-10 {
+            margin-bottom: 10px;
+        }
+        
+        .mb-20 {
+            margin-bottom: 20px;
+        }
+        
+        .mt-20 {
+            margin-top: 20px;
+        }
+        
+        .mt-30 {
+            margin-top: 30px;
+        }
+        
+        .d-flex {
+            display: flex;
+        }
+        
+        .gap-10 {
+            gap: 10px;
+        }
+        
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+        
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            z-index: 100;
+            transition: transform 0.3s;
+        }
+        
+        .scroll-top:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Security Overlay (Prevents cheating) -->
+    <div id="securityOverlay" class="security-overlay hidden">
+        <div>
+            <i class="fas fa-exclamation-triangle fa-3x mb-20"></i>
+            <h2>Security Violation Detected</h2>
+            <p>You have attempted to perform an unauthorized action.</p>
+            <p>This incident has been logged.</p>
+            <p id="violationCount">Violation count: 0</p>
+        </div>
+    </div>
+    
+    <!-- Scroll to top button -->
+    <div id="scrollTopBtn" class="scroll-top hidden">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <!-- Login Screen -->
+    <div id="loginScreen" class="login-screen">
+        <div class="login-card">
+            <div class="logo-section">
+                <div class="logo">SC</div>
+                <div class="branding">
+                    <h1>Scholar's Camp</h1>
+                    <p>Chemistry Computer-Based Test</p>
+                </div>
+            </div>
+            
+            <h2>Student Login</h2>
+            
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" class="form-control" placeholder="Enter your username">
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="form-control" placeholder="Enter your password">
+            </div>
+            
+            <div class="form-group">
+                <button id="loginBtn" class="btn btn-primary">Login to Exam</button>
+            </div>
+            
+            <div class="text-center">
+                <p><strong>Exam:</strong> Chemistry - Matter and Separation Techniques</p>
+                <p><strong>Duration:</strong> 150 minutes | <strong>Questions:</strong> 141</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Exam Interface -->
+    <div id="examInterface" class="container hidden">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo-section">
+                <div class="logo">SC</div>
+                <div class="branding">
+                    <h1>Chemistry CBT: Matter & Separation Techniques</h1>
+                    <p>Scholar's Camp Examination Platform</p>
+                </div>
+            </div>
+            
+            <div class="user-info">
+                <div id="studentName">Student: Loading...</div>
+                <div id="examTimer">Time: 150:00</div>
+            </div>
+        </header>
+        
+        <!-- Exam Info -->
+        <section id="examInfo" class="exam-info">
+            <h2>Examination Instructions</h2>
+            
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">Subject</div>
+                    <div class="info-value">Chemistry</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Topic</div>
+                    <div class="info-value">Matter & Separation Techniques</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Total Questions</div>
+                    <div class="info-value">141</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Duration</div>
+                    <div class="info-value">150 minutes</div>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-label">Instructions</div>
+                <div class="info-value">
+                    <ul style="padding-left: 20px; margin-top: 10px;">
+                        <li>Answer all questions</li>
+                        <li>You can navigate between questions using the Previous/Next buttons</li>
+                        <li>You can also jump to any question using the question indicators</li>
+                        <li>The exam will auto-submit when time elapses</li>
+                        <li>Once submitted, you cannot change your answers</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center mt-20">
+                <button id="startExamBtn" class="btn btn-primary">Start Exam</button>
+            </div>
+        </section>
+        
+        <!-- Timer -->
+        <div id="timerContainer" class="timer-container hidden">
+            <div>Time Remaining</div>
+            <div id="timer" class="timer">150:00</div>
+            <div>Minutes:Seconds</div>
+        </div>
+        
+        <!-- Question Container -->
+        <section id="questionSection" class="hidden">
+            <div class="question-container">
+                <div class="question-header">
+                    <div class="question-number" id="currentQuestionNum">1</div>
+                    <div id="questionMeta">Question 1 of 141</div>
+                </div>
+                
+                <div class="question-text" id="questionText">
+                    Loading question...
+                </div>
+                
+                <div class="options-container" id="optionsContainer">
+                    <!-- Options will be dynamically inserted here -->
+                </div>
+                
+                <div class="navigation">
+                    <button id="prevBtn" class="btn btn-warning nav-btn">Previous</button>
+                    
+                    <div class="question-list" id="questionIndicators">
+                        <!-- Question indicators will be dynamically inserted here -->
+                    </div>
+                    
+                    <button id="nextBtn" class="btn btn-primary nav-btn">Next</button>
+                </div>
+                
+                <div class="text-center mt-20">
+                    <button id="submitExamBtn" class="btn btn-danger">Submit Exam</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Results Screen -->
+        <section id="resultsScreen" class="results-screen hidden">
+            <div class="results-header">
+                <h2>Exam Results</h2>
+                <p>Chemistry: Matter and Separation Techniques</p>
+                <div class="score-display" id="finalScore">0/141</div>
+                <p id="percentageScore">0%</p>
+                <p id="performanceMessage"></p>
+            </div>
+            
+            <div class="score-summary">
+                <div class="summary-item">
+                    <div class="summary-value" id="correctAnswers">0</div>
+                    <div class="summary-label">Correct Answers</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value" id="incorrectAnswers">0</div>
+                    <div class="summary-label">Incorrect Answers</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value" id="unansweredQuestions">141</div>
+                    <div class="summary-label">Unanswered</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value" id="timeSpent">0:00</div>
+                    <div class="summary-label">Time Spent</div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <button id="reviewAnswersBtn" class="btn btn-primary">View Complete Exam Review</button>
+                <button id="newAttemptBtn" class="btn btn-success mt-20">New Attempt</button>
+            </div>
+            
+            <!-- Review Section -->
+            <div id="reviewSection" class="review-container hidden">
+                <h3 class="mb-20">Complete Exam Review</h3>
+                
+                <!-- Review Stats -->
+                <div class="review-stats">
+                    <div class="stat-item stat-correct">
+                        <i class="fas fa-check-circle"></i>
+                        <span id="reviewCorrectCount">0</span> Correct
+                    </div>
+                    <div class="stat-item stat-incorrect">
+                        <i class="fas fa-times-circle"></i>
+                        <span id="reviewIncorrectCount">0</span> Incorrect
+                    </div>
+                    <div class="stat-item stat-unanswered">
+                        <i class="fas fa-question-circle"></i>
+                        <span id="reviewUnansweredCount">0</span> Unanswered
+                    </div>
+                </div>
+                
+                <!-- Review Controls -->
+                <div class="review-controls">
+                    <div class="filter-controls">
+                        <button id="filterAll" class="btn btn-small btn-primary active">All Questions</button>
+                        <button id="filterCorrect" class="btn btn-small btn-success">Correct Only</button>
+                        <button id="filterIncorrect" class="btn btn-small btn-danger">Incorrect Only</button>
+                        <button id="filterUnanswered" class="btn btn-small btn-warning">Unanswered Only</button>
+                    </div>
+                    <div>
+                        <button id="downloadReviewBtn" class="btn btn-small">
+                            <i class="fas fa-download"></i> Download Review
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Review Questions Container -->
+                <div id="reviewQuestions">
+                    <!-- Review questions will be dynamically inserted here -->
+                </div>
+                
+                <!-- Pagination -->
+                <div class="pagination" id="reviewPagination">
+                    <!-- Pagination buttons will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Scholar's Camp Chemistry CBT System &copy; <span id="currentYear"></span></p>
+            <p>This exam interface is designed for educational purposes. Unauthorized access is prohibited.</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Complete Chemistry Questions Database (141 questions)
+        const chemistryQuestions = [
+            // First 90 questions from your array
+            {
+                id: 1,
+                text: "A liquid begins to boil when",
+                options: [
+                    "constituent particles acquire energy which make them slide over one another.",
+                    "constituent particles acquire energy above the average kinetic energy.",
+                    "constituent particles acquire energy below the average kinetic energy.",
+                    "constituent particles acquire a greater kinetic energy."
+                ],
+                correctAnswer: "D",
+                explanation: "Boiling occurs when particles acquire enough kinetic energy to overcome atmospheric pressure and escape as vapor."
+            },
+            {
+                id: 2,
+                text: "Pure water can be made to boil below 100°C under",
+                options: [
+                    "increased volume",
+                    "decreased volume",
+                    "increased external pressure on it",
+                    "decreased external pressure on it."
+                ],
+                correctAnswer: "D",
+                explanation: "Decreasing external pressure lowers the boiling point of water."
+            },
+            {
+                id: 3,
+                text: "The triple point is represented by",
+                options: ["I", "IV", "VII", "VI"],
+                correctAnswer: "C",
+                explanation: "The triple point is where solid, liquid, and gas phases coexist in equilibrium."
+            },
+            {
+                id: 4,
+                text: "The boundary of liquid and vapour is represented by",
+                options: ["I", "IV", "VII", "VI"],
+                correctAnswer: "B",
+                explanation: "The boundary between liquid and vapor phases on a phase diagram."
+            },
+            {
+                id: 5,
+                text: "Ice, water and steam",
+                options: [
+                    "have the same physical properties",
+                    "are different allotropes",
+                    "are chemically alike",
+                    "have different molar masses"
+                ],
+                correctAnswer: "C",
+                explanation: "They are different physical states of the same chemical substance (H₂O)."
+            },
+            {
+                id: 6,
+                text: "Changes in the physical states of a substance M are given in the scheme below: Liquid M → Heat → Gas M, Solid M → u → v → Gas M. w, v, u respectively are",
+                options: [
+                    "sublimation, condensation and freezing",
+                    "sublimation, vaporization and solidification",
+                    "freezing, condensation and sublimation",
+                    "evaporation, liquefaction and solidification"
+                ],
+                correctAnswer: "A",
+                explanation: "Solid to gas is sublimation, gas to liquid is condensation, liquid to solid is freezing."
+            },
+            {
+                id: 7,
+                text: "The addition of water to calcium carbide results to",
+                options: [
+                    "a mixture",
+                    "no change",
+                    "a chemical change",
+                    "a physical change"
+                ],
+                correctAnswer: "C",
+                explanation: "CaC₂ + 2H₂O → C₂H₂ + Ca(OH)₂ is a chemical reaction producing acetylene gas."
+            },
+            {
+                id: 8,
+                text: "At the melting point of a solid, the constituent particles",
+                options: [
+                    "acquire energy much below the average kinetic energy",
+                    "vibrate vigorously and acquire energy that overcomes the attractive forces",
+                    "acquire energy slightly less than the attractive forces",
+                    "acquire energy equal to the attractive forces."
+                ],
+                correctAnswer: "B",
+                explanation: "At melting point, particles gain enough energy to overcome intermolecular forces."
+            },
+            {
+                id: 9,
+                text: "An organic solid melts between 115°C – 122°C. This indicates that the solid is",
+                options: ["pure", "impure", "efflorescent", "hygroscopic"],
+                correctAnswer: "B",
+                explanation: "Pure substances have sharp melting points; a range indicates impurities."
+            },
+            {
+                id: 10,
+                text: "A physical property is",
+                options: ["rusting", "precipitation", "neutralization", "melting point"],
+                correctAnswer: "D",
+                explanation: "Melting point is a physical property; others are chemical changes."
+            },
+            {
+                id: 11,
+                text: "An example of physical change is",
+                options: [
+                    "rusting of iron",
+                    "souring of milk",
+                    "burning of wood",
+                    "dissolution of a salt in water"
+                ],
+                correctAnswer: "D",
+                explanation: "Dissolution is reversible by evaporation, making it a physical change."
+            },
+            {
+                id: 12,
+                text: "What do allotropes have in common?",
+                options: [
+                    "melting point",
+                    "solubility",
+                    "chemical reactions",
+                    "state of matter"
+                ],
+                correctAnswer: "C",
+                explanation: "Allotropes of an element have similar chemical properties but different physical properties."
+            },
+            {
+                id: 13,
+                text: "Metals conduct an electric current due to the presence of",
+                options: [
+                    "bounded electrons",
+                    "free mobile electrons",
+                    "crystal lattice structure",
+                    "vacant atomic orbitals"
+                ],
+                correctAnswer: "B",
+                explanation: "Metallic bonding involves delocalized electrons that can move freely."
+            },
+            {
+                id: 14,
+                text: "Which of the following oxides would produce an aqueous solution having a pH less than 7?",
+                options: [
+                    "sodium oxide",
+                    "calcium oxide",
+                    "copper (II) oxide",
+                    "carbon (IV) oxide"
+                ],
+                correctAnswer: "D",
+                explanation: "CO₂ forms carbonic acid (H₂CO₃) in water, giving acidic pH."
+            },
+            {
+                id: 15,
+                text: "The phenomenon in which carbon exists in two major forms in the solid state is known as",
+                options: ["isomorphism", "allotropy", "isomerism", "isotopy"],
+                correctAnswer: "B",
+                explanation: "Allotropy refers to different structural forms of the same element."
+            },
+            {
+                id: 16,
+                text: "Iron can be extracted from",
+                options: ["haematite", "cryolite", "cassiterite", "bauxite"],
+                correctAnswer: "A",
+                explanation: "Haematite (Fe₂O₃) is the principal ore of iron."
+            },
+            {
+                id: 17,
+                text: "Diamond is used in abrasives because of its",
+                options: ["high melting point", "lustre", "hardness", "density"],
+                correctAnswer: "C",
+                explanation: "Diamond is the hardest known natural substance."
+            },
+            {
+                id: 18,
+                text: "An alloy of mercury is:",
+                options: [
+                    "coinage bronze",
+                    "soft solder",
+                    "amalgam",
+                    "stainless steel"
+                ],
+                correctAnswer: "C",
+                explanation: "Amalgam is an alloy containing mercury."
+            },
+            {
+                id: 19,
+                text: "Which one of the following oxides is amphoteric?",
+                options: ["MgO", "CO₂", "Al₂O₃", "CuO"],
+                correctAnswer: "C",
+                explanation: "Al₂O₃ reacts with both acids and bases, making it amphoteric."
+            },
+            {
+                id: 20,
+                text: "All the following statements are false except",
+                options: [
+                    "Metals conduct electricity while non-metals do not",
+                    "Metals form basic oxides while non-metals form acidic oxides only.",
+                    "In the electrochemical series, metals are above hydrogen while non-metals are below hydrogen.",
+                    "Metals are malleable while non-metals are brittle."
+                ],
+                correctAnswer: "D",
+                explanation: "Malleability is a characteristic metallic property."
+            },
+            {
+                id: 21,
+                text: "The constituents of stainless steel are",
+                options: [
+                    "carbon, iron and lead",
+                    "carbon, iron and chromium",
+                    "carbon, iron and copper",
+                    "carbon, iron and silver"
+                ],
+                correctAnswer: "B",
+                explanation: "Stainless steel contains iron, carbon, and chromium (at least 10.5%)."
+            },
+            {
+                id: 22,
+                text: "In which of the following pairs of elements do the two elements exhibit allotropic?",
+                options: [
+                    "phosphorus and hydrogen",
+                    "oxygen and chlorine",
+                    "sulphur and nitrogen",
+                    "oxygen and sulphur"
+                ],
+                correctAnswer: "D",
+                explanation: "Both oxygen (O₂ and O₃) and sulphur (rhombic and monoclinic) exhibit allotropy."
+            },
+            {
+                id: 23,
+                text: "All the following allotropes cannot conduct electricity except",
+                options: [
+                    "rhombohedral",
+                    "graphite",
+                    "diamond",
+                    "red phosphorus"
+                ],
+                correctAnswer: "B",
+                explanation: "Graphite has delocalized electrons between layers, allowing conductivity."
+            },
+            {
+                id: 24,
+                text: "Bronze is an alloy of copper and",
+                options: ["aluminium", "zinc", "tin", "iron"],
+                correctAnswer: "C",
+                explanation: "Bronze is primarily copper with tin."
+            },
+            {
+                id: 25,
+                text: "Brass is an alloy of",
+                options: [
+                    "copper and zinc",
+                    "copper and tin",
+                    "iron and zinc",
+                    "lead and aluminium"
+                ],
+                correctAnswer: "A",
+                explanation: "Brass is an alloy of copper and zinc."
+            },
+            {
+                id: 26,
+                text: "Which of the following oxides is neutral?",
+                options: ["SO₂", "Al₂O₃", "CO", "CO₂"],
+                correctAnswer: "C",
+                explanation: "Carbon monoxide (CO) is neutral; it doesn't form acid or base with water."
+            },
+            {
+                id: 27,
+                text: "In which of the following pairs is each of the two members forms higher oxide on reacting with oxygen?",
+                options: [
+                    "SO₂ and NO",
+                    "CO₂ and H₂O",
+                    "CO and CO₂",
+                    "NO and H₂O"
+                ],
+                correctAnswer: "A",
+                explanation: "SO₂ can form SO₃, and NO can form NO₂ or N₂O₅ with more oxygen."
+            },
+            {
+                id: 28,
+                text: "An element that would combine with oxygen to form an amphoteric oxide is",
+                options: ["Mg", "Al", "Ag", "Cu"],
+                correctAnswer: "B",
+                explanation: "Aluminum forms Al₂O₃ which is amphoteric."
+            },
+            {
+                id: 29,
+                text: "The following are chemical changes except",
+                options: [
+                    "Passing of steam over heated iron",
+                    "Dissolution of sodium chloride in water",
+                    "Bubbling of chlorine into a jar containing hydrogen",
+                    "Bubbling of chlorine into water"
+                ],
+                correctAnswer: "B",
+                explanation: "Dissolution of NaCl is physical; others involve chemical reactions."
+            },
+            {
+                id: 30,
+                text: "The following are pairs of impure substances only, except",
+                options: [
+                    "Petroleum and Rubber Latex",
+                    "Ethanol and Propanone",
+                    "Petroleum and Ethanol",
+                    "Rubber Latex and Propanone"
+                ],
+                correctAnswer: "B",
+                explanation: "Ethanol and propanone can be pure compounds; others are always mixtures."
+            },
+            {
+                id: 31,
+                text: "Durulumin is an alloy consisting of",
+                options: [
+                    "copper, aluminium, lead and manganese",
+                    "deuterium and aluminium",
+                    "aluminium, copper, manganese and magnesium",
+                    "nickel, gold, aluminium and copper"
+                ],
+                correctAnswer: "C",
+                explanation: "Duralumin is Al-Cu-Mg-Mn alloy used in aircraft construction."
+            },
+            {
+                id: 32,
+                text: "Which of the following is an impure substance?",
+                options: [
+                    "Distilled water",
+                    "Ethanoic acid",
+                    "Sulphur powder",
+                    "Bronze"
+                ],
+                correctAnswer: "D",
+                explanation: "Bronze is an alloy (mixture), making it impure compared to pure compounds."
+            },
+            {
+                id: 33,
+                text: "Given the following equations: Al₂O₃ + 6HCl → 2AlCl₃ + 3H₂O, Al₂O₃ + 2KOH → 2KAlO₂ + 3H₂O. It can be deduced that Al₂O₃ is",
+                options: [
+                    "a neutral oxide",
+                    "an acidic oxide",
+                    "a basic oxide",
+                    "an amphoteric oxide"
+                ],
+                correctAnswer: "D",
+                explanation: "Reacts with both acid and base, showing amphoteric behavior."
+            },
+            {
+                id: 34,
+                text: "The passage of sulphur (IV) oxide gas into water leads to",
+                options: [
+                    "a mixture",
+                    "an exothermic change",
+                    "a chemical change",
+                    "a physical change"
+                ],
+                correctAnswer: "C",
+                explanation: "SO₂ + H₂O → H₂SO₃ (sulphurous acid), a chemical reaction."
+            },
+            {
+                id: 35,
+                text: "Alloys are preferred to pure metals in construction works because",
+                options: [
+                    "metals are malleable and ductile",
+                    "alloys are mixtures of metals",
+                    "metals are harder than alloys",
+                    "metallic properties are improved upon in alloys"
+                ],
+                correctAnswer: "D",
+                explanation: "Alloys often have superior properties like strength, hardness, and corrosion resistance."
+            },
+            {
+                id: 36,
+                text: "The following statements about graphite are correct except that it",
+                options: [
+                    "is a form of carbon",
+                    "contains mobile free ions",
+                    "is used as a lubricant",
+                    "has a layer lattice structure"
+                ],
+                correctAnswer: "B",
+                explanation: "Graphite contains mobile electrons, not ions."
+            },
+            {
+                id: 37,
+                text: "Which of the following metallic oxides is amphoteric?",
+                options: ["PbO", "CuO", "MgO", "Fe₂O₃"],
+                correctAnswer: "A",
+                explanation: "Lead(II) oxide (PbO) shows amphoteric behavior."
+            },
+            {
+                id: 38,
+                text: "Diamond and graphite are forms of the same element (carbon) because they",
+                options: [
+                    "both have the same density",
+                    "both conduct electricity",
+                    "both form carbon (IV) oxide on combustion",
+                    "are both used as lubricants"
+                ],
+                correctAnswer: "C",
+                explanation: "Both produce CO₂ when burned in oxygen, proving they're forms of carbon."
+            },
+            {
+                id: 39,
+                text: "The ore from which aluminum is extracted is",
+                options: ["cassiterite", "magnetite", "malachite", "bauxite"],
+                correctAnswer: "D",
+                explanation: "Bauxite (Al₂O₃·2H₂O) is the principal ore of aluminum."
+            },
+            {
+                id: 40,
+                text: "Metals are ductile because they",
+                options: [
+                    "can be hammered into sheets",
+                    "can be drawn into different shapes",
+                    "can be alloyed",
+                    "can make a sound note when struck"
+                ],
+                correctAnswer: "B",
+                explanation: "Ductility is the ability to be drawn into wires."
+            },
+            {
+                id: 41,
+                text: "Which of the following ores is not a metal ore?",
+                options: ["Haematite", "Graphite", "Cassiterite", "Bauxite"],
+                correctAnswer: "B",
+                explanation: "Graphite is a non-metallic mineral (form of carbon)."
+            },
+            {
+                id: 42,
+                text: "Which of the following alloys is used in the building of the body of aircraft?",
+                options: ["Durulumin", "Brass", "Bronze", "Steel"],
+                correctAnswer: "A",
+                explanation: "Duralumin (Al-Cu alloy) is lightweight and strong for aircraft."
+            },
+            {
+                id: 43,
+                text: "Aluminium is extracted from its ore by",
+                options: [
+                    "reduction with coke",
+                    "oil floatation",
+                    "roasting",
+                    "electrolytic reduction"
+                ],
+                correctAnswer: "D",
+                explanation: "Aluminum is extracted by electrolysis of molten Al₂O₃ in cryolite."
+            },
+            {
+                id: 44,
+                text: "Graphite is used as a lubricant because it",
+                options: [
+                    "has a sliding layer structure",
+                    "has mobile free electrons",
+                    "is an allotrope of carbon",
+                    "has no free electrons"
+                ],
+                correctAnswer: "A",
+                explanation: "Graphite's layered structure allows sheets to slide over each other."
+            },
+            {
+                id: 45,
+                text: "The following gases may be dried with conc. H₂SO₄ except",
+                options: ["SO₂", "NH₃", "HCl", "N₂"],
+                correctAnswer: "B",
+                explanation: "NH₃ reacts with H₂SO₄ to form ammonium sulfate."
+            },
+            {
+                id: 46,
+                text: "Which of the following compounds is deliquescent?",
+                options: [
+                    "NaCl",
+                    "NaNO₃",
+                    "Na₂CO₃ · 10H₂O",
+                    "CaCl₂"
+                ],
+                correctAnswer: "D",
+                explanation: "Calcium chloride absorbs moisture from air to form solution."
+            },
+            {
+                id: 47,
+                text: "An anhydride is an oxide whose aqueous solution has",
+                options: [
+                    "a pH less than 7",
+                    "no water of crystallization",
+                    "hydrogen atoms",
+                    "a pH greater than 7"
+                ],
+                correctAnswer: "A",
+                explanation: "Acid anhydrides form acidic solutions in water."
+            },
+            {
+                id: 48,
+                text: "An oxide is said to be amphoteric if",
+                options: [
+                    "it is an amorphous oxide of a metal",
+                    "it is an amorphous oxide of a non-metal",
+                    "it loses its oxygen on sublimation",
+                    "it behaves both as a base as well as an acid"
+                ],
+                correctAnswer: "D",
+                explanation: "Amphoteric oxides react with both acids and bases."
+            },
+            {
+                id: 49,
+                text: "Sodium tetranoxosulphate (VI) decahydrate loses its water of crystallization on exposure to air. The process is known as",
+                options: ["dehydration", "efflorescence", "hygroscopy", "deliquescence"],
+                correctAnswer: "B",
+                explanation: "Efflorescence is loss of water of crystallization to atmosphere."
+            },
+            {
+                id: 50,
+                text: "A substance commonly used for drying ammonia gas is",
+                options: [
+                    "concentrated tetranoxosulphate (VI) acid",
+                    "magnesium trioxonitrate (V)",
+                    "quicklime",
+                    "anhydrous calcium chloride"
+                ],
+                correctAnswer: "C",
+                explanation: "Quicklime (CaO) is used as it doesn't react with NH₃."
+            },
+            {
+                id: 51,
+                text: "Which of the following substances is not hygroscopic?",
+                options: [
+                    "NaOH pellets",
+                    "conc. H₂SO₄",
+                    "anhydrous FeCl₃",
+                    "anhydrous Na₂CO₃"
+                ],
+                correctAnswer: "D",
+                explanation: "Anhydrous Na₂CO₃ is not particularly hygroscopic compared to others."
+            },
+            {
+                id: 52,
+                text: "Which of the following compounds is efflorescent?",
+                options: [
+                    "Concentrated H₂SO₄",
+                    "CuO",
+                    "Na₂CO₃, 10 H₂O",
+                    "Fused CaCl₂"
+                ],
+                correctAnswer: "C",
+                explanation: "Washing soda (Na₂CO₃·10H₂O) loses water to become powdery."
+            },
+            {
+                id: 53,
+                text: "The increase in mass of fused calcium chloride on exposure to the atmosphere can be attributed to the presence of",
+                options: ["moisture", "dust particles", "nitrogen", "noble gases"],
+                correctAnswer: "A",
+                explanation: "CaCl₂ is deliquescent and absorbs atmospheric moisture."
+            },
+            {
+                id: 54,
+                text: "Compounds that are deliquescent are also said to be",
+                options: ["insoluble", "efflorescent", "anhydrous", "hygroscopic"],
+                correctAnswer: "D",
+                explanation: "Deliquescent substances absorb moisture from air (a type of hygroscopy)."
+            },
+            {
+                id: 55,
+                text: "A compound that absorbs moisture from the atmosphere and eventually forms a solution is said to be",
+                options: ["efflorescent", "hygroscopic", "anhydrous", "deliquescent"],
+                correctAnswer: "D",
+                explanation: "Deliquescence: absorption continues until substance dissolves."
+            },
+            {
+                id: 56,
+                text: "If two weighed salts W and X were left exposed in the laboratory overnight. In the following morning W has gained weight and X has turned into a liquid, what can be said of W and X?",
+                options: [
+                    "X is efflorescent",
+                    "W and X are efflorescent",
+                    "W and X are deliquescent",
+                    "W and X are hygroscopic"
+                ],
+                correctAnswer: "C",
+                explanation: "W gained weight (hygroscopic), X liquefied (deliquescent)."
+            },
+            {
+                id: 57,
+                text: "On exposure to dry atmosphere, the crystals of sodium trioxocarbonate (IV) changed to a white powder. The phenomenon that accounts for this is",
+                options: ["efflorescence", "hygroscopy", "oxidation", "deliquescence"],
+                correctAnswer: "A",
+                explanation: "Loss of water of crystallization = efflorescence."
+            },
+            {
+                id: 58,
+                text: "Which one of the following contains an efflorescent, a deliquescent and a hygroscopic substance respectively",
+                options: [
+                    "Na₂SO₄, concentrated H₂SO₄, CaCl₂",
+                    "Na₂CO₃, H₂O, FeSO₄, 7H₂O, concentrated H₂SO₄",
+                    "Na₂CO₃, 10 H₂O, NaOH pellet, concentrated H₂SO₄",
+                    "concentrated H₂SO₄, FeSO₄, 7H₂O, MgCl₂"
+                ],
+                correctAnswer: "C",
+                explanation: "Na₂CO₃·10H₂O (efflorescent), NaOH (deliquescent), conc. H₂SO₄ (hygroscopic)."
+            },
+            {
+                id: 59,
+                text: "Why should sodium hydroxide pellets be stored in properly closed containers? A NaOH pellet",
+                options: [
+                    "readily absorbs water vapour from the air",
+                    "is easily oxidized by atmospheric oxygen",
+                    "turns golden yellow when exposed to light",
+                    "melts at a low temperature"
+                ],
+                correctAnswer: "A",
+                explanation: "NaOH is deliquescent and absorbs CO₂ from air to form Na₂CO₃."
+            },
+            {
+                id: 60,
+                text: "The scattering of a beam of light in a gel is known as",
+                options: ["dialysis", "Brownian motion", "tyndal effect", "fluorescence"],
+                correctAnswer: "C",
+                explanation: "Tyndall effect: light scattering by colloidal particles."
+            },
+            {
+                id: 61,
+                text: "A mixture of two immiscible liquids can be separated by",
+                options: [
+                    "separatory funnel",
+                    "distillation",
+                    "filtration",
+                    "chromatography"
+                ],
+                correctAnswer: "A",
+                explanation: "Separatory funnel separates immiscible liquids by density difference."
+            },
+            {
+                id: 62,
+                text: "The method of separation employed in separating sodium chloride crystals from seawater is",
+                options: ["neutralization", "evaporation", "sedimentation", "condensation"],
+                correctAnswer: "B",
+                explanation: "Evaporation removes water, leaving NaCl crystals."
+            },
+            {
+                id: 63,
+                text: "The factor considered in chromatography, a method of separation, is the differences in the rate of",
+                options: [
+                    "diffusion of the constituents of a mixture",
+                    "migration of the constituents of a mixture",
+                    "reaction of the constituents of a mixture",
+                    "sedimentation of the constituents of a mixture"
+                ],
+                correctAnswer: "B",
+                explanation: "Chromatography separates based on differential migration through a medium."
+            },
+            {
+                id: 64,
+                text: "The salient difference between colloids and suspensions is the fact that while colloids",
+                options: [
+                    "do not scatter light, suspensions do",
+                    "can be separated by filtration, suspensions cannot be so separated",
+                    "can be separated by a membrane, suspensions cannot",
+                    "do not settle on standing, suspensions do"
+                ],
+                correctAnswer: "D",
+                explanation: "Colloids are stable; suspensions settle due to gravity."
+            },
+            {
+                id: 65,
+                text: "Ammonium chloride can be separated from an impure source by",
+                options: ["distillation", "filtration", "decantation", "sublimation"],
+                correctAnswer: "D",
+                explanation: "NH₄Cl sublimes on heating, leaving non-sublimable impurities."
+            },
+            {
+                id: 66,
+                text: "What is the constituent that is common to both bronze and brass?",
+                options: ["zinc", "copper", "aluminium", "lead"],
+                correctAnswer: "B",
+                explanation: "Both are copper-based alloys: bronze (Cu+Sn), brass (Cu+Zn)."
+            },
+            {
+                id: 67,
+                text: "The graph below shows the solubility curves of two solids M and N in water. Which of the following methods of separation can be used to separate a mixture of M and N?",
+                options: [
+                    "distillation",
+                    "crystallization",
+                    "fractional crystallization",
+                    "sublimation"
+                ],
+                correctAnswer: "C",
+                explanation: "Fractional crystallization uses differences in solubility and temperature dependence."
+            },
+            {
+                id: 68,
+                text: "The nitrogen got from the liquefaction of air is denser than that got from nitrogen containing compounds due to the fact that the former contains",
+                options: ["oxygen", "noble gases", "water vapour", "carbon (IV) oxide"],
+                correctAnswer: "B",
+                explanation: "Atmospheric nitrogen contains about 1% noble gases (mainly argon)."
+            },
+            {
+                id: 69,
+                text: "The collision of dust particles randomly in a beam of sunlight is termed",
+                options: ["diffusion", "dialysis", "tyndall effect", "Brownian movement"],
+                correctAnswer: "D",
+                explanation: "Brownian motion: random movement of particles in fluid."
+            },
+            {
+                id: 70,
+                text: "All the following factors affect the choice of methods for separation of mixtures except",
+                options: ["molar mass", "solubility", "particle size", "magnetic property"],
+                correctAnswer: "A",
+                explanation: "Molar mass doesn't directly affect physical separation methods."
+            },
+            {
+                id: 71,
+                text: "What will be the residue in the reaction represented by the equation below if the reaction mixture is filtered? I₂(g) + J₂(g) → K₂(g) + M₂(g) + N₂(g)",
+                options: ["I", "J", "K", "M"],
+                correctAnswer: "B",
+                explanation: "All are gases except J (based on typical reaction patterns)."
+            },
+            {
+                id: 72,
+                text: "The separatory funnel technique is based on differences in",
+                options: ["boiling point", "volatility", "particle size", "miscibility"],
+                correctAnswer: "D",
+                explanation: "Separatory funnel separates immiscible liquids."
+            },
+            {
+                id: 73,
+                text: "Which of the following mixtures can be separated by means of filtration?",
+                options: [
+                    "sodium chloride and potassium trioxonitrate(V)",
+                    "sodium chloride and sand",
+                    "sodium chloride and lead trioxonitrate(V)",
+                    "sodium chloride and sugar"
+                ],
+                correctAnswer: "B",
+                explanation: "Sand is insoluble and can be filtered from NaCl solution."
+            },
+            {
+                id: 74,
+                text: "Chlorophyll pigment can be shown to be a mixture of chemical compounds by",
+                options: ["crystallization", "hydrolysis", "sublimation", "chromatography"],
+                correctAnswer: "D",
+                explanation: "Chromatography separates chlorophyll into chlorophyll a, b, etc."
+            },
+            {
+                id: 75,
+                text: "The separation of a band of ink into its various components is by",
+                options: [
+                    "fractional crystallization",
+                    "fractional distillation",
+                    "chromatography",
+                    "sublimation"
+                ],
+                correctAnswer: "C",
+                explanation: "Paper chromatography separates ink pigments."
+            },
+            {
+                id: 76,
+                text: "One of the following is a mixture",
+                options: [
+                    "granulated sugar",
+                    "sea-water",
+                    "sodium chloride",
+                    "iron filings"
+                ],
+                correctAnswer: "B",
+                explanation: "Sea-water contains water, salts, minerals, organic matter."
+            },
+            {
+                id: 77,
+                text: "In which of the following can fractional distillation be used as a means of separation?",
+                options: [
+                    "Nitrogen from liquid air",
+                    "Sodium chloride from seawater",
+                    "Iodine from a solution of iodine in carbon tetrachloride",
+                    "Sulphur from a solution of sulphur in carbon disulphide"
+                ],
+                correctAnswer: "A",
+                explanation: "Fractional distillation separates liquid air components by boiling point differences."
+            },
+            {
+                id: 78,
+                text: "The following mixtures are homogeneous except",
+                options: ["filtered seawater", "air", "flood water", "writing ink"],
+                correctAnswer: "C",
+                explanation: "Flood water contains suspended particles making it heterogeneous."
+            },
+            {
+                id: 79,
+                text: "An emulsion paint is a colloid in which",
+                options: [
+                    "gas or liquid particle dispersed in a liquid",
+                    "liquid particles dispersed in a liquid",
+                    "solid particles dispersed in a liquid",
+                    "solid particles dispersed in a solid"
+                ],
+                correctAnswer: "B",
+                explanation: "Emulsion: liquid droplets dispersed in another liquid."
+            },
+            {
+                id: 80,
+                text: "When air is passed through alkaline solution of pyrogallol, lime water and then over fused calcium chloride, the gases left are:",
+                options: [
+                    "oxygen and nitrogen",
+                    "the noble gases and water vapour",
+                    "nitrogen and noble gases",
+                    "nitrogen, noble gases and carbon (IV) oxide"
+                ],
+                correctAnswer: "C",
+                explanation: "Pyrogallol absorbs O₂, lime water absorbs CO₂, CaCl₂ absorbs water vapor."
+            },
+            {
+                id: 81,
+                text: "Which of the following separation techniques is used to isolate high quality ethanol from palm wine?",
+                options: [
+                    "Evaporation",
+                    "Simple distillation with a dehydrant",
+                    "Fractional distillation with a dehydrant",
+                    "Fractional distillation without a dehydrant"
+                ],
+                correctAnswer: "C",
+                explanation: "Fractional distillation with dehydrant (like CaO) produces absolute alcohol."
+            },
+            {
+                id: 82,
+                text: "Mist consists of",
+                options: [
+                    "solid particles dispersed in liquid",
+                    "liquid particles dispersed in liquid",
+                    "gas or liquid particles dispersed in liquid",
+                    "liquid particles dispersed in gas"
+                ],
+                correctAnswer: "D",
+                explanation: "Mist: liquid droplets (water) in gas (air)."
+            },
+            {
+                id: 83,
+                text: "Petroleum is refined into useful products by",
+                options: [
+                    "catalytic reforming",
+                    "column chromatography",
+                    "fractional distillation",
+                    "thermal decomposition"
+                ],
+                correctAnswer: "C",
+                explanation: "Fractional distillation separates petroleum fractions by boiling range."
+            },
+            {
+                id: 84,
+                text: "The physical property used in obtaining nitrogen and oxygen industrially from liquid air is the",
+                options: ["melting point", "boiling point", "diffusion", "retention factor"],
+                correctAnswer: "B",
+                explanation: "Different boiling points (N₂: -196°C, O₂: -183°C) allow separation."
+            },
+            {
+                id: 85,
+                text: "Soap lather is a colloidal system in which a",
+                options: [
+                    "gas is dispersed in a liquid",
+                    "liquid is dispersed in another liquid",
+                    "solid is dispersed in a liquid",
+                    "liquid is dispersed in a gas"
+                ],
+                correctAnswer: "A",
+                explanation: "Foam: gas bubbles dispersed in liquid."
+            },
+            {
+                id: 86,
+                text: "A chemical reaction is involved in",
+                options: [
+                    "fractional distillation",
+                    "precipitation",
+                    "chromatography",
+                    "sublimation"
+                ],
+                correctAnswer: "B",
+                explanation: "Precipitation involves chemical reaction forming insoluble product."
+            },
+            {
+                id: 87,
+                text: "The solute in a colloidal solution can",
+                options: [
+                    "sedimentate",
+                    "scatter light rays",
+                    "not scatter light rays",
+                    "not dialyze"
+                ],
+                correctAnswer: "B",
+                explanation: "Colloids show Tyndall effect (light scattering)."
+            },
+            {
+                id: 88,
+                text: "A sample of air that has been passed through caustic soda will",
+                options: [
+                    "be free of noble gas",
+                    "not turn lime water milky",
+                    "rekindle a glowing splint",
+                    "be moisture free"
+                ],
+                correctAnswer: "B",
+                explanation: "NaOH absorbs CO₂, so no CO₂ to turn lime water milky."
+            },
+            {
+                id: 89,
+                text: "A mixture of KCl₃ and CuCO₃ is best separated by",
+                options: [
+                    "fractional distillation followed by crystallization",
+                    "fractional distillation followed by filtration",
+                    "dissolution followed by sublimation",
+                    "dissolution followed by evaporation"
+                ],
+                correctAnswer: "D",
+                explanation: "Dissolve in water (KCl soluble, CuCO₃ insoluble), filter, evaporate filtrate."
+            },
+            {
+                id: 90,
+                text: "A separatory funnel can be used to separate a mixture of water",
+                options: [
+                    "methanol",
+                    "methylated spirit",
+                    "methanoic acid",
+                    "petroleum spirit"
+                ],
+                correctAnswer: "D",
+                explanation: "Petroleum spirit is immiscible with water, forming separate layers."
+            },
+            // Additional 51 questions to reach 141 total
+            {
+                id: 91,
+                text: "Which of the following separation techniques is based on differences in boiling points?",
+                options: [
+                    "Filtration",
+                    "Chromatography",
+                    "Distillation",
+                    "Centrifugation"
+                ],
+                correctAnswer: "C",
+                explanation: "Distillation separates components based on different boiling points."
+            },
+            {
+                id: 92,
+                text: "The process of converting a gas directly to solid without passing through liquid state is called",
+                options: [
+                    "Sublimation",
+                    "Deposition",
+                    "Condensation",
+                    "Freezing"
+                ],
+                correctAnswer: "B",
+                explanation: "Deposition is gas to solid; sublimation is solid to gas."
+            },
+            {
+                id: 93,
+                text: "Which of these is NOT a method for separating mixtures?",
+                options: [
+                    "Crystallization",
+                    "Neutralization",
+                    "Chromatography",
+                    "Magnetic separation"
+                ],
+                correctAnswer: "B",
+                explanation: "Neutralization is a chemical reaction, not a separation technique."
+            },
+            {
+                id: 94,
+                text: "A pure substance differs from a mixture because it",
+                options: [
+                    "has a fixed composition",
+                    "can be separated by physical means",
+                    "contains two or more elements",
+                    "has variable properties"
+                ],
+                correctAnswer: "A",
+                explanation: "Pure substances have fixed composition and properties."
+            },
+            {
+                id: 95,
+                text: "Which separation method would be best for separating sand from iron filings?",
+                options: [
+                    "Filtration",
+                    "Magnetic separation",
+                    "Decantation",
+                    "Evaporation"
+                ],
+                correctAnswer: "B",
+                explanation: "Iron is magnetic, sand is not."
+            },
+            {
+                id: 96,
+                text: "When salt is added to water, the boiling point of water",
+                options: [
+                    "Decreases",
+                    "Increases",
+                    "Remains the same",
+                    "First decreases then increases"
+                ],
+                correctAnswer: "B",
+                explanation: "Adding solute increases boiling point (boiling point elevation)."
+            },
+            {
+                id: 97,
+                text: "Which of these is a heterogeneous mixture?",
+                options: [
+                    "Sugar solution",
+                    "Air",
+                    "Brass",
+                    "Soil"
+                ],
+                correctAnswer: "D",
+                explanation: "Soil has visibly different components."
+            },
+            {
+                id: 98,
+                text: "The method used to separate dyes in ink is",
+                options: [
+                    "Simple distillation",
+                    "Fractional distillation",
+                    "Paper chromatography",
+                    "Sublimation"
+                ],
+                correctAnswer: "C",
+                explanation: "Paper chromatography separates colored components."
+            },
+            {
+                id: 99,
+                text: "Which of these processes involves a change of state from liquid to gas at the surface only?",
+                options: [
+                    "Boiling",
+                    "Evaporation",
+                    "Sublimation",
+                    "Condensation"
+                ],
+                correctAnswer: "B",
+                explanation: "Evaporation occurs at surface below boiling point."
+            },
+            {
+                id: 100,
+                text: "A substance that cannot be broken down into simpler substances by chemical means is",
+                options: [
+                    "Compound",
+                    "Element",
+                    "Mixture",
+                    "Solution"
+                ],
+                correctAnswer: "B",
+                explanation: "Elements are fundamental substances."
+            },
+            {
+                id: 101,
+                text: "Which of the following is a chemical property?",
+                options: [
+                    "Melting point",
+                    "Density",
+                    "Flammability",
+                    "Solubility"
+                ],
+                correctAnswer: "C",
+                explanation: "Flammability involves chemical change."
+            },
+            {
+                id: 102,
+                text: "The separation technique that uses a porous barrier to separate solids from liquids is",
+                options: [
+                    "Distillation",
+                    "Filtration",
+                    "Chromatography",
+                    "Crystallization"
+                ],
+                correctAnswer: "B",
+                explanation: "Filtration uses filter paper or other porous material."
+            },
+            {
+                id: 103,
+                text: "Which metal is liquid at room temperature?",
+                options: [
+                    "Mercury",
+                    "Sodium",
+                    "Iron",
+                    "Aluminum"
+                ],
+                correctAnswer: "A",
+                explanation: "Mercury is the only common metal liquid at room temperature."
+            },
+            {
+                id: 104,
+                text: "The process of settling of heavier particles in a suspension is called",
+                options: [
+                    "Filtration",
+                    "Sedimentation",
+                    "Decantation",
+                    "Distillation"
+                ],
+                correctAnswer: "B",
+                explanation: "Sedimentation is settling under gravity."
+            },
+            {
+                id: 105,
+                text: "Which of these is a compound?",
+                options: [
+                    "Air",
+                    "Water",
+                    "Brass",
+                    "Milk"
+                ],
+                correctAnswer: "B",
+                explanation: "Water (H₂O) is a compound; others are mixtures."
+            },
+            {
+                id: 106,
+                text: "The technique used to separate immiscible liquids is",
+                options: [
+                    "Fractional distillation",
+                    "Separating funnel",
+                    "Simple distillation",
+                    "Chromatography"
+                ],
+                correctAnswer: "B",
+                explanation: "Separating funnel uses density difference."
+            },
+            {
+                id: 107,
+                text: "Which of these shows the Tyndall effect?",
+                options: [
+                    "Sugar solution",
+                    "Salt solution",
+                    "Milk",
+                    "Alcohol in water"
+                ],
+                correctAnswer: "C",
+                explanation: "Milk is a colloid showing Tyndall effect."
+            },
+            {
+                id: 108,
+                text: "The process of obtaining salt from sea water involves",
+                options: [
+                    "Filtration",
+                    "Evaporation",
+                    "Distillation",
+                    "Chromatography"
+                ],
+                correctAnswer: "B",
+                explanation: "Water evaporates leaving salt crystals."
+            },
+            {
+                id: 109,
+                text: "Which of these is a physical change?",
+                options: [
+                    "Burning of paper",
+                    "Rusting of iron",
+                    "Melting of ice",
+                    "Digestion of food"
+                ],
+                correctAnswer: "C",
+                explanation: "Melting changes state without chemical change."
+            },
+            {
+                id: 110,
+                text: "The method used to separate components of petroleum is",
+                options: [
+                    "Simple distillation",
+                    "Fractional distillation",
+                    "Steam distillation",
+                    "Vacuum distillation"
+                ],
+                correctAnswer: "B",
+                explanation: "Fractional distillation separates fractions by boiling range."
+            },
+            {
+                id: 111,
+                text: "Which of these mixtures can be separated by sublimation?",
+                options: [
+                    "Salt and sugar",
+                    "Sand and salt",
+                    "Ammonium chloride and sand",
+                    "Iron and sulfur"
+                ],
+                correctAnswer: "C",
+                explanation: "Ammonium chloride sublimes, sand doesn't."
+            },
+            {
+                id: 112,
+                text: "The process of converting water vapor to liquid water is called",
+                options: [
+                    "Evaporation",
+                    "Condensation",
+                    "Sublimation",
+                    "Freezing"
+                ],
+                correctAnswer: "B",
+                explanation: "Condensation is gas to liquid change."
+            },
+            {
+                id: 113,
+                text: "Which of these is NOT a pure substance?",
+                options: [
+                    "Distilled water",
+                    "Gold",
+                    "Sugar",
+                    "Milk"
+                ],
+                correctAnswer: "D",
+                explanation: "Milk is a mixture of water, fats, proteins, etc."
+            },
+            {
+                id: 114,
+                text: "The separation technique based on different rates of diffusion is",
+                options: [
+                    "Distillation",
+                    "Chromatography",
+                    "Centrifugation",
+                    "Filtration"
+                ],
+                correctAnswer: "B",
+                explanation: "Chromatography separates based on differential migration."
+            },
+            {
+                id: 115,
+                text: "Which of these is a homogeneous mixture?",
+                options: [
+                    "Orange juice with pulp",
+                    "Concrete",
+                    "Salt water",
+                    "Soil"
+                ],
+                correctAnswer: "C",
+                explanation: "Salt water has uniform composition throughout."
+            },
+            {
+                id: 116,
+                text: "The process of separating cream from milk is",
+                options: [
+                    "Filtration",
+                    "Centrifugation",
+                    "Distillation",
+                    "Chromatography"
+                ],
+                correctAnswer: "B",
+                explanation: "Centrifuge separates by density difference."
+            },
+            {
+                id: 117,
+                text: "Which of these is a chemical change?",
+                options: [
+                    "Dissolving sugar in water",
+                    "Breaking glass",
+                    "Burning wood",
+                    "Melting butter"
+                ],
+                correctAnswer: "C",
+                explanation: "Burning produces new substances (ash, CO₂, etc.)."
+            },
+            {
+                id: 118,
+                text: "The method to separate alcohol from water is",
+                options: [
+                    "Filtration",
+                    "Simple distillation",
+                    "Separating funnel",
+                    "Chromatography"
+                ],
+                correctAnswer: "B",
+                explanation: "Different boiling points (78°C vs 100°C)."
+            },
+            {
+                id: 119,
+                text: "Which of these substances sublimes?",
+                options: [
+                    "Common salt",
+                    "Sugar",
+                    "Iodine",
+                    "Sand"
+                ],
+                correctAnswer: "C",
+                explanation: "Iodine changes directly from solid to purple vapor."
+            },
+            {
+                id: 120,
+                text: "The process of obtaining pure water from salt water is",
+                options: [
+                    "Filtration",
+                    "Distillation",
+                    "Evaporation",
+                    "Chromatography"
+                ],
+                correctAnswer: "B",
+                explanation: "Distillation produces pure water (distillate)."
+            },
+            {
+                id: 121,
+                text: "Which of these is an element?",
+                options: [
+                    "Water",
+                    "Carbon dioxide",
+                    "Oxygen",
+                    "Sugar"
+                ],
+                correctAnswer: "C",
+                explanation: "Oxygen (O₂) is an element; others are compounds."
+            },
+            {
+                id: 122,
+                text: "The technique to separate pigments in chlorophyll is",
+                options: [
+                    "Simple distillation",
+                    "Fractional distillation",
+                    "Paper chromatography",
+                    "Sublimation"
+                ],
+                correctAnswer: "C",
+                explanation: "Paper chromatography separates plant pigments."
+            },
+            {
+                id: 123,
+                text: "Which of these mixtures is heterogeneous?",
+                options: [
+                    "Air",
+                    "Vinegar",
+                    "Blood",
+                    "Salt solution"
+                ],
+                correctAnswer: "C",
+                explanation: "Blood has visible cells suspended in plasma."
+            },
+            {
+                id: 124,
+                text: "The process of separating wheat grains from chaff is",
+                options: [
+                    "Winnowing",
+                    "Sieving",
+                    "Hand picking",
+                    "Magnetic separation"
+                ],
+                correctAnswer: "A",
+                explanation: "Winnowing uses wind to separate lighter chaff."
+            },
+            {
+                id: 125,
+                text: "Which of these is a physical property?",
+                options: [
+                    "Flammability",
+                    "Reactivity with acid",
+                    "Density",
+                    "Ability to rust"
+                ],
+                correctAnswer: "C",
+                explanation: "Density can be measured without chemical change."
+            },
+            {
+                id: 126,
+                text: "The method to separate two miscible liquids with close boiling points is",
+                options: [
+                    "Simple distillation",
+                    "Fractional distillation",
+                    "Separating funnel",
+                    "Chromatography"
+                ],
+                correctAnswer: "B",
+                explanation: "Fractional distillation with fractionating column."
+            },
+            {
+                id: 127,
+                text: "Which of these changes is reversible?",
+                options: [
+                    "Burning of paper",
+                    "Cooking of food",
+                    "Melting of ice",
+                    "Rusting of iron"
+                ],
+                correctAnswer: "C",
+                explanation: "Ice can be melted and refrozen without chemical change."
+            },
+            {
+                id: 128,
+                text: "The process of separating tea leaves from tea is",
+                options: [
+                    "Distillation",
+                    "Filtration",
+                    "Evaporation",
+                    "Chromatography"
+                ],
+                correctAnswer: "B",
+                explanation: "Filter paper retains tea leaves."
+            },
+            {
+                id: 129,
+                text: "Which of these is a compound?",
+                options: [
+                    "Bronze",
+                    "Steel",
+                    "Water",
+                    "Air"
+                ],
+                correctAnswer: "C",
+                explanation: "Water (H₂O) has fixed composition; others are mixtures."
+            },
+            {
+                id: 130,
+                text: "The technique to separate sand and water is",
+                options: [
+                    "Distillation",
+                    "Filtration",
+                    "Chromatography",
+                    "Sublimation"
+                ],
+                correctAnswer: "B",
+                explanation: "Sand is insoluble, can be filtered out."
+            },
+            {
+                id: 131,
+                text: "Which of these shows Brownian motion?",
+                options: [
+                    "Sugar crystals in water",
+                    "Dust particles in air",
+                    "Salt in water",
+                    "Oil in water"
+                ],
+                correctAnswer: "B",
+                explanation: "Visible as random motion in light beam."
+            },
+            {
+                id: 132,
+                text: "The process of obtaining salt from its solution by heating is",
+                options: [
+                    "Distillation",
+                    "Crystallization",
+                    "Evaporation to dryness",
+                    "Filtration"
+                ],
+                correctAnswer: "C",
+                explanation: "Heating removes all water leaving solid salt."
+            },
+            {
+                id: 133,
+                text: "Which of these is a chemical property?",
+                options: [
+                    "Color",
+                    "Odor",
+                    "Toxicity",
+                    "Melting point"
+                ],
+                correctAnswer: "C",
+                explanation: "Toxicity relates to chemical interaction with living systems."
+            },
+            {
+                id: 134,
+                text: "The method to separate colors in a dye is",
+                options: [
+                    "Simple distillation",
+                    "Fractional distillation",
+                    "Paper chromatography",
+                    "Sublimation"
+                ],
+                correctAnswer: "C",
+                explanation: "Different pigments travel at different rates on paper."
+            },
+            {
+                id: 135,
+                text: "Which of these is a mixture?",
+                options: [
+                    "Carbon dioxide",
+                    "Gold",
+                    "Table salt",
+                    "Sea water"
+                ],
+                correctAnswer: "D",
+                explanation: "Sea water contains various dissolved salts."
+            },
+            {
+                id: 136,
+                text: "The process of separating components of ink using a solvent is",
+                options: [
+                    "Distillation",
+                    "Chromatography",
+                    "Filtration",
+                    "Evaporation"
+                ],
+                correctAnswer: "B",
+                explanation: "Solvent carries different pigments different distances."
+            },
+            {
+                id: 137,
+                text: "Which of these is an example of condensation?",
+                options: [
+                    "Drying of clothes",
+                    "Formation of dew",
+                    "Melting of snow",
+                    "Sublimation of dry ice"
+                ],
+                correctAnswer: "B",
+                explanation: "Dew forms when water vapor condenses on cool surfaces."
+            },
+            {
+                id: 138,
+                text: "The technique to separate iron filings from sulfur powder is",
+                options: [
+                    "Filtration",
+                    "Magnetic separation",
+                    "Distillation",
+                    "Chromatography"
+                ],
+                correctAnswer: "B",
+                explanation: "Magnet attracts iron but not sulfur."
+            },
+            {
+                id: 139,
+                text: "Which of these processes involves absorption of heat?",
+                options: [
+                    "Condensation",
+                    "Freezing",
+                    "Melting",
+                    "Deposition"
+                ],
+                correctAnswer: "C",
+                explanation: "Melting requires heat input (endothermic)."
+            },
+            {
+                id: 140,
+                text: "The method to separate oil from water is",
+                options: [
+                    "Simple distillation",
+                    "Fractional distillation",
+                    "Separating funnel",
+                    "Chromatography"
+                ],
+                correctAnswer: "C",
+                explanation: "Oil and water are immiscible, form separate layers."
+            },
+            {
+                id: 141,
+                text: "Which of these is NOT a state of matter?",
+                options: [
+                    "Solid",
+                    "Liquid",
+                    "Gas",
+                    "Energy"
+                ],
+                correctAnswer: "D",
+                explanation: "The three common states are solid, liquid, and gas."
+            }
+        ];
+
+        // Shuffle questions and options for each attempt
+        function shuffleArray(array) {
+            const shuffled = [...array];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
+        
+        // Shuffle options within each question
+        function shuffleQuestionOptions(questions) {
+            return questions.map(question => {
+                const shuffledOptions = shuffleArray([...question.options]);
+                // Find the new position of the correct answer
+                const originalCorrectAnswer = question.correctAnswer;
+                const correctOptionText = question.options[parseInt(originalCorrectAnswer) - 1] || 
+                                         question.options.find(opt => opt.startsWith(originalCorrectAnswer));
+                
+                let newCorrectAnswer = "A";
+                if (correctOptionText) {
+                    const newIndex = shuffledOptions.findIndex(opt => opt === correctOptionText);
+                    newCorrectAnswer = String.fromCharCode(65 + newIndex); // Convert 0->A, 1->B, etc.
+                }
+                
+                return {
+                    ...question,
+                    options: shuffledOptions,
+                    shuffledCorrectAnswer: newCorrectAnswer,
+                    originalCorrectAnswer: originalCorrectAnswer
+                };
+            });
+        }
+        
+        // Application State
+        let currentUser = null;
+        let currentExam = {
+            questions: [],
+            currentQuestionIndex: 0,
+            answers: {},
+            startTime: null,
+            endTime: null,
+            submitted: false,
+            score: 0
+        };
+        
+        let timerInterval = null;
+        let examDuration = 150 * 60; // 150 minutes in seconds
+        let timeRemaining = examDuration;
+        let violationCount = 0;
+        
+        // Review State
+        let currentReviewFilter = 'all';
+        let currentReviewPage = 1;
+        const questionsPerPage = 10;
+        
+        // DOM Elements
+        const loginScreen = document.getElementById('loginScreen');
+        const examInterface = document.getElementById('examInterface');
+        const examInfo = document.getElementById('examInfo');
+        const timerContainer = document.getElementById('timerContainer');
+        const questionSection = document.getElementById('questionSection');
+        const resultsScreen = document.getElementById('resultsScreen');
+        const securityOverlay = document.getElementById('securityOverlay');
+        const violationCountElement = document.getElementById('violationCount');
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        
+        // Login Elements
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+        const loginBtn = document.getElementById('loginBtn');
+        
+        // Exam Control Elements
+        const startExamBtn = document.getElementById('startExamBtn');
+        const studentNameElement = document.getElementById('studentName');
+        const examTimerElement = document.getElementById('examTimer');
+        const timerElement = document.getElementById('timer');
+        
+        // Question Elements
+        const currentQuestionNum = document.getElementById('currentQuestionNum');
+        const questionMeta = document.getElementById('questionMeta');
+        const questionText = document.getElementById('questionText');
+        const optionsContainer = document.getElementById('optionsContainer');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const questionIndicators = document.getElementById('questionIndicators');
+        const submitExamBtn = document.getElementById('submitExamBtn');
+        
+        // Results Elements
+        const finalScore = document.getElementById('finalScore');
+        const percentageScore = document.getElementById('percentageScore');
+        const performanceMessage = document.getElementById('performanceMessage');
+        const correctAnswers = document.getElementById('correctAnswers');
+        const incorrectAnswers = document.getElementById('incorrectAnswers');
+        const unansweredQuestions = document.getElementById('unansweredQuestions');
+        const timeSpent = document.getElementById('timeSpent');
+        const reviewAnswersBtn = document.getElementById('reviewAnswersBtn');
+        const newAttemptBtn = document.getElementById('newAttemptBtn');
+        const reviewSection = document.getElementById('reviewSection');
+        const reviewQuestions = document.getElementById('reviewQuestions');
+        
+        // Review Elements
+        const reviewCorrectCount = document.getElementById('reviewCorrectCount');
+        const reviewIncorrectCount = document.getElementById('reviewIncorrectCount');
+        const reviewUnansweredCount = document.getElementById('reviewUnansweredCount');
+        const filterAll = document.getElementById('filterAll');
+        const filterCorrect = document.getElementById('filterCorrect');
+        const filterIncorrect = document.getElementById('filterIncorrect');
+        const filterUnanswered = document.getElementById('filterUnanswered');
+        const downloadReviewBtn = document.getElementById('downloadReviewBtn');
+        const reviewPagination = document.getElementById('reviewPagination');
+        
+        // Initialize the application
+        function init() {
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Event Listeners
+            loginBtn.addEventListener('click', handleLogin);
+            usernameInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') handleLogin();
+            });
+            passwordInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') handleLogin();
+            });
+            
+            startExamBtn.addEventListener('click', startExam);
+            prevBtn.addEventListener('click', showPreviousQuestion);
+            nextBtn.addEventListener('click', showNextQuestion);
+            submitExamBtn.addEventListener('click', confirmSubmitExam);
+            reviewAnswersBtn.addEventListener('click', toggleReviewSection);
+            newAttemptBtn.addEventListener('click', startNewAttempt);
+            
+            // Review filter buttons
+            filterAll.addEventListener('click', () => setReviewFilter('all'));
+            filterCorrect.addEventListener('click', () => setReviewFilter('correct'));
+            filterIncorrect.addEventListener('click', () => setReviewFilter('incorrect'));
+            filterUnanswered.addEventListener('click', () => setReviewFilter('unanswered'));
+            
+            // Download review button
+            downloadReviewBtn.addEventListener('click', downloadReview);
+            
+            // Scroll to top button
+            scrollTopBtn.addEventListener('click', scrollToTop);
+            window.addEventListener('scroll', toggleScrollTopButton);
+            
+            // Security measures
+            setupSecurityMeasures();
+            
+            // Check if user is already logged in (for demo purposes)
+            const savedUser = localStorage.getItem('chemistryCBT_user');
+            if (savedUser) {
+                try {
+                    const user = JSON.parse(savedUser);
+                    usernameInput.value = user.username;
+                    passwordInput.value = user.password;
+                } catch (e) {
+                    // Ignore error
+                }
+            }
+        }
+        
+        // Security functions
+        function setupSecurityMeasures() {
+            // Prevent right-click
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+                showSecurityViolation('Right-click disabled');
+            });
+            
+            // Prevent copy
+            document.addEventListener('copy', function(e) {
+                e.preventDefault();
+                showSecurityViolation('Copying disabled');
+            });
+            
+            // Prevent cut
+            document.addEventListener('cut', function(e) {
+                e.preventDefault();
+                showSecurityViolation('Cutting disabled');
+            });
+            
+            // Prevent paste
+            document.addEventListener('paste', function(e) {
+                e.preventDefault();
+                showSecurityViolation('Pasting disabled');
+            });
+            
+            // Prevent opening developer tools
+            document.addEventListener('keydown', function(e) {
+                // F12 key
+                if (e.keyCode === 123) {
+                    e.preventDefault();
+                    showSecurityViolation('Developer tools disabled');
+                    return false;
+                }
+                
+                // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C
+                if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) {
+                    e.preventDefault();
+                    showSecurityViolation('Developer tools disabled');
+                    return false;
+                }
+                
+                // Ctrl+U (view source)
+                if (e.ctrlKey && e.keyCode === 85) {
+                    e.preventDefault();
+                    showSecurityViolation('View source disabled');
+                    return false;
+                }
+            });
+            
+            // Prevent page refresh
+            window.addEventListener('beforeunload', function(e) {
+                if (currentExam.startTime && !currentExam.submitted) {
+                    e.preventDefault();
+                    e.returnValue = 'Are you sure you want to leave? Your exam progress may be lost.';
+                    return 'Are you sure you want to leave? Your exam progress may be lost.';
+                }
+            });
+            
+            // Log visibility changes (tab switching)
+            document.addEventListener('visibilitychange', function() {
+                if (document.hidden && currentExam.startTime && !currentExam.submitted) {
+                    showSecurityViolation('Tab switching detected');
+                }
+            });
+        }
+        
+        function showSecurityViolation(reason) {
+            violationCount++;
+            violationCountElement.textContent = `Violation count: ${violationCount}`;
+            
+            securityOverlay.classList.remove('hidden');
+            
+            // Hide after 5 seconds
+            setTimeout(() => {
+                securityOverlay.classList.add('hidden');
+            }, 5000);
+            
+            // Log violation
+            console.warn(`Security violation: ${reason}. Count: ${violationCount}`);
+        }
+        
+        // Login function
+        function handleLogin() {
+            const username = usernameInput.value.trim();
+            const password = passwordInput.value.trim();
+            
+            if (!username || !password) {
+                alert('Please enter both username and password');
+                return;
+            }
+            
+            // Simple authentication
+            if (username.length < 3 || password.length < 3) {
+                alert('Invalid credentials. Username and password must be at least 3 characters.');
+                return;
+            }
+            
+            // Save user for demo purposes
+            const user = {
+                username,
+                password,
+                name: username.charAt(0).toUpperCase() + username.slice(1)
+            };
+            localStorage.setItem('chemistryCBT_user', JSON.stringify(user));
+            
+            currentUser = user;
+            studentNameElement.textContent = `Student: ${user.name}`;
+            
+            // Show exam interface
+            loginScreen.classList.add('hidden');
+            examInterface.classList.remove('hidden');
+        }
+        
+        // Start exam
+        function startExam() {
+            // Create a shuffled copy of questions for this attempt
+            let shuffledQuestions = shuffleArray([...chemistryQuestions]);
+            
+            // Shuffle options for each question and update correct answer positions
+            shuffledQuestions = shuffleQuestionOptions(shuffledQuestions);
+            
+            currentExam = {
+                questions: shuffledQuestions,
+                currentQuestionIndex: 0,
+                answers: {},
+                startTime: new Date(),
+                endTime: null,
+                submitted: false,
+                score: 0
+            };
+            
+            timeRemaining = examDuration;
+            
+            // Hide exam info, show timer and questions
+            examInfo.classList.add('hidden');
+            timerContainer.classList.remove('hidden');
+            questionSection.classList.remove('hidden');
+            
+            // Start timer
+            startTimer();
+            
+            // Display first question
+            displayQuestion(currentExam.currentQuestionIndex);
+            updateQuestionIndicators();
+        }
+        
+        // Timer functions
+        function startTimer() {
+            updateTimerDisplay();
+            
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                updateTimerDisplay();
+                
+                if (timeRemaining <= 0) {
+                    clearInterval(timerInterval);
+                    autoSubmitExam();
+                } else if (timeRemaining <= 300) { // 5 minutes remaining
+                    timerElement.classList.add('timer-danger');
+                } else if (timeRemaining <= 600) { // 10 minutes remaining
+                    timerElement.classList.add('timer-warning');
+                }
+            }, 1000);
+        }
+        
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeRemaining / 60);
+            const seconds = timeRemaining % 60;
+            
+            const timeString = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            timerElement.textContent = timeString;
+            examTimerElement.textContent = `Time: ${timeString}`;
+        }
+        
+        // Question navigation
+        function displayQuestion(index) {
+            const question = currentExam.questions[index];
+            
+            currentQuestionNum.textContent = index + 1;
+            questionMeta.textContent = `Question ${index + 1} of ${currentExam.questions.length}`;
+            questionText.textContent = question.text;
+            
+            // Clear previous options
+            optionsContainer.innerHTML = '';
+            
+            // Create option elements
+            question.options.forEach((option, optionIndex) => {
+                const optionElement = document.createElement('div');
+                optionElement.className = 'option';
+                
+                // Get the option letter (A, B, C, D)
+                const optionLetter = String.fromCharCode(65 + optionIndex);
+                
+                // Check if this option was previously selected
+                const userAnswer = currentExam.answers[index];
+                const isSelected = userAnswer === optionLetter;
+                
+                if (isSelected) {
+                    optionElement.classList.add('selected');
+                }
+                
+                // If exam is submitted, show correct/incorrect
+                if (currentExam.submitted) {
+                    const isCorrect = optionLetter === question.shuffledCorrectAnswer;
+                    
+                    if (isCorrect) {
+                        optionElement.classList.add('correct');
+                    } else if (isSelected && !isCorrect) {
+                        optionElement.classList.add('incorrect');
+                    }
+                }
+                
+                optionElement.textContent = `${optionLetter}. ${option}`;
+                optionElement.addEventListener('click', () => selectOption(index, optionLetter));
+                
+                optionsContainer.appendChild(optionElement);
+            });
+            
+            // Update navigation buttons
+            prevBtn.disabled = index === 0;
+            nextBtn.disabled = index === currentExam.questions.length - 1;
+            
+            // Update question indicators
+            updateQuestionIndicators();
+        }
+        
+        function selectOption(questionIndex, optionLetter) {
+            if (currentExam.submitted) return;
+            
+            // Save answer
+            currentExam.answers[questionIndex] = optionLetter;
+            
+            // Update display
+            displayQuestion(questionIndex);
+        }
+        
+        function showPreviousQuestion() {
+            if (currentExam.currentQuestionIndex > 0) {
+                currentExam.currentQuestionIndex--;
+                displayQuestion(currentExam.currentQuestionIndex);
+            }
+        }
+        
+        function showNextQuestion() {
+            if (currentExam.currentQuestionIndex < currentExam.questions.length - 1) {
+                currentExam.currentQuestionIndex++;
+                displayQuestion(currentExam.currentQuestionIndex);
+            }
+        }
+        
+        function updateQuestionIndicators() {
+            questionIndicators.innerHTML = '';
+            
+            // Show only 20 indicators at a time for performance
+            const totalQuestions = currentExam.questions.length;
+            const maxVisible = 20;
+            const startIndex = Math.max(0, Math.min(currentExam.currentQuestionIndex - Math.floor(maxVisible/2), totalQuestions - maxVisible));
+            const endIndex = Math.min(startIndex + maxVisible, totalQuestions);
+            
+            // Add "First" indicator if needed
+            if (startIndex > 0) {
+                const firstIndicator = document.createElement('div');
+                firstIndicator.className = 'question-indicator';
+                firstIndicator.textContent = '1';
+                firstIndicator.title = 'Go to question 1';
+                firstIndicator.addEventListener('click', () => {
+                    currentExam.currentQuestionIndex = 0;
+                    displayQuestion(0);
+                });
+                questionIndicators.appendChild(firstIndicator);
+                
+                // Add ellipsis if there's a gap
+                if (startIndex > 1) {
+                    const ellipsis = document.createElement('div');
+                    ellipsis.className = 'question-indicator';
+                    ellipsis.textContent = '...';
+                    ellipsis.style.cursor = 'default';
+                    ellipsis.style.backgroundColor = 'transparent';
+                    questionIndicators.appendChild(ellipsis);
+                }
+            }
+            
+            // Add visible indicators
+            for (let i = startIndex; i < endIndex; i++) {
+                const indicator = document.createElement('div');
+                indicator.className = 'question-indicator';
+                
+                if (i === currentExam.currentQuestionIndex) {
+                    indicator.classList.add('current');
+                }
+                
+                if (currentExam.answers[i]) {
+                    indicator.classList.add('answered');
+                }
+                
+                indicator.textContent = i + 1;
+                indicator.title = `Go to question ${i + 1}`;
+                indicator.addEventListener('click', () => {
+                    currentExam.currentQuestionIndex = i;
+                    displayQuestion(i);
+                });
+                
+                questionIndicators.appendChild(indicator);
+            }
+            
+            // Add "Last" indicator if needed
+            if (endIndex < totalQuestions) {
+                // Add ellipsis if there's a gap
+                if (endIndex < totalQuestions - 1) {
+                    const ellipsis = document.createElement('div');
+                    ellipsis.className = 'question-indicator';
+                    ellipsis.textContent = '...';
+                    ellipsis.style.cursor = 'default';
+                    ellipsis.style.backgroundColor = 'transparent';
+                    questionIndicators.appendChild(ellipsis);
+                }
+                
+                const lastIndicator = document.createElement('div');
+                lastIndicator.className = 'question-indicator';
+                lastIndicator.textContent = totalQuestions;
+                lastIndicator.title = `Go to question ${totalQuestions}`;
+                lastIndicator.addEventListener('click', () => {
+                    currentExam.currentQuestionIndex = totalQuestions - 1;
+                    displayQuestion(totalQuestions - 1);
+                });
+                questionIndicators.appendChild(lastIndicator);
+            }
+        }
+        
+        // Exam submission
+        function confirmSubmitExam() {
+            if (confirm('Are you sure you want to submit your exam? You cannot change your answers after submission.')) {
+                submitExam();
+            }
+        }
+        
+        function autoSubmitExam() {
+            alert('Time is up! Your exam has been automatically submitted.');
+            submitExam();
+        }
+        
+        function submitExam() {
+            clearInterval(timerInterval);
+            
+            currentExam.submitted = true;
+            currentExam.endTime = new Date();
+            
+            // Calculate score
+            let correctCount = 0;
+            
+            currentExam.questions.forEach((question, index) => {
+                const userAnswer = currentExam.answers[index];
+                if (userAnswer === question.shuffledCorrectAnswer) {
+                    correctCount++;
+                }
+            });
+            
+            currentExam.score = correctCount;
+            
+            // Hide question section, show results
+            questionSection.classList.add('hidden');
+            timerContainer.classList.add('hidden');
+            resultsScreen.classList.remove('hidden');
+            
+            // Display results
+            displayResults();
+            
+            // Save attempt to localStorage
+            saveAttemptToLocalStorage();
+        }
+        
+        function displayResults() {
+            const totalQuestions = currentExam.questions.length;
+            const correctCount = currentExam.score;
+            const answeredCount = Object.keys(currentExam.answers).length;
+            const incorrectCount = answeredCount - correctCount;
+            const unansweredCount = totalQuestions - answeredCount;
+            const percentage = Math.round((correctCount / totalQuestions) * 100);
+            
+            // Calculate time spent
+            const startTime = new Date(currentExam.startTime);
+            const endTime = currentExam.endTime ? new Date(currentExam.endTime) : new Date();
+            const timeDiff = Math.floor((endTime - startTime) / 1000); // in seconds
+            const minutesSpent = Math.floor(timeDiff / 60);
+            const secondsSpent = timeDiff % 60;
+            
+            // Update UI
+            finalScore.textContent = `${correctCount}/${totalQuestions}`;
+            percentageScore.textContent = `${percentage}%`;
+            
+            correctAnswers.textContent = correctCount;
+            incorrectAnswers.textContent = incorrectCount;
+            unansweredQuestions.textContent = unansweredCount;
+            timeSpent.textContent = `${minutesSpent}:${secondsSpent.toString().padStart(2, '0')}`;
+            
+            // Performance message
+            let message = '';
+            if (percentage >= 80) {
+                message = 'Excellent performance! You have a strong understanding of Matter and Separation Techniques.';
+            } else if (percentage >= 60) {
+                message = 'Good work! You have a good grasp of the concepts but could improve in some areas.';
+            } else if (percentage >= 40) {
+                message = 'Fair attempt. Review the topics where you had difficulties.';
+            } else {
+                message = 'You need to study more on Matter and Separation Techniques. Review the concepts thoroughly.';
+            }
+            
+            performanceMessage.textContent = message;
+        }
+        
+        function saveAttemptToLocalStorage() {
+            if (!currentUser) return;
+            
+            const attempt = {
+                userId: currentUser.username,
+                userName: currentUser.name,
+                date: new Date().toISOString(),
+                score: currentExam.score,
+                totalQuestions: currentExam.questions.length,
+                percentage: Math.round((currentExam.score / currentExam.questions.length) * 100),
+                timeSpent: examDuration - timeRemaining,
+                answers: currentExam.answers
+            };
+            
+            // Get existing attempts or create new array
+            const attempts = JSON.parse(localStorage.getItem('chemistryCBT_attempts') || '[]');
+            attempts.push(attempt);
+            
+            // Keep only last 10 attempts
+            if (attempts.length > 10) {
+                attempts.shift();
+            }
+            
+            localStorage.setItem('chemistryCBT_attempts', JSON.stringify(attempts));
+        }
+        
+        function toggleReviewSection() {
+            if (reviewSection.classList.contains('hidden')) {
+                reviewSection.classList.remove('hidden');
+                reviewAnswersBtn.textContent = 'Hide Review';
+                displayCompleteReview();
+            } else {
+                reviewSection.classList.add('hidden');
+                reviewAnswersBtn.textContent = 'View Complete Exam Review';
+            }
+        }
+        
+        function displayCompleteReview() {
+            // Calculate review stats
+            const totalQuestions = currentExam.questions.length;
+            let correctCount = 0;
+            let incorrectCount = 0;
+            let unansweredCount = 0;
+            
+            currentExam.questions.forEach((question, index) => {
+                const userAnswer = currentExam.answers[index];
+                if (!userAnswer) {
+                    unansweredCount++;
+                } else if (userAnswer === question.shuffledCorrectAnswer) {
+                    correctCount++;
+                } else {
+                    incorrectCount++;
+                }
+            });
+            
+            // Update review stats
+            reviewCorrectCount.textContent = correctCount;
+            reviewIncorrectCount.textContent = incorrectCount;
+            reviewUnansweredCount.textContent = unansweredCount;
+            
+            // Display filtered questions
+            displayFilteredReviewQuestions();
+        }
+        
+        function setReviewFilter(filter) {
+            currentReviewFilter = filter;
+            currentReviewPage = 1;
+            
+            // Update active filter button
+            [filterAll, filterCorrect, filterIncorrect, filterUnanswered].forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            switch(filter) {
+                case 'all':
+                    filterAll.classList.add('active');
+                    break;
+                case 'correct':
+                    filterCorrect.classList.add('active');
+                    break;
+                case 'incorrect':
+                    filterIncorrect.classList.add('active');
+                    break;
+                case 'unanswered':
+                    filterUnanswered.classList.add('active');
+                    break;
+            }
+            
+            displayFilteredReviewQuestions();
+        }
+        
+        function displayFilteredReviewQuestions() {
+            // Get filtered questions
+            const filteredQuestions = currentExam.questions.filter((question, index) => {
+                const userAnswer = currentExam.answers[index];
+                
+                switch(currentReviewFilter) {
+                    case 'all':
+                        return true;
+                    case 'correct':
+                        return userAnswer === question.shuffledCorrectAnswer;
+                    case 'incorrect':
+                        return userAnswer && userAnswer !== question.shuffledCorrectAnswer;
+                    case 'unanswered':
+                        return !userAnswer;
+                    default:
+                        return true;
+                }
+            });
+            
+            // Calculate pagination
+            const totalPages = Math.ceil(filteredQuestions.length / questionsPerPage);
+            const startIndex = (currentReviewPage - 1) * questionsPerPage;
+            const endIndex = Math.min(startIndex + questionsPerPage, filteredQuestions.length);
+            const pageQuestions = filteredQuestions.slice(startIndex, endIndex);
+            
+            // Clear previous content
+            reviewQuestions.innerHTML = '';
+            
+            if (pageQuestions.length === 0) {
+                reviewQuestions.innerHTML = `
+                    <div class="review-question text-center">
+                        <p>No questions found with the selected filter.</p>
+                    </div>
+                `;
+                reviewPagination.innerHTML = '';
+                return;
+            }
+            
+            // Display questions for current page
+            pageQuestions.forEach((question, localIndex) => {
+                const globalIndex = currentExam.questions.indexOf(question);
+                const userAnswer = currentExam.answers[globalIndex];
+                const isCorrect = userAnswer === question.shuffledCorrectAnswer;
+                const isUnanswered = !userAnswer;
+                
+                const reviewQuestion = document.createElement('div');
+                reviewQuestion.className = 'review-question';
+                
+                // Add appropriate class based on answer status
+                if (isUnanswered) {
+                    reviewQuestion.classList.add('unanswered');
+                } else if (isCorrect) {
+                    reviewQuestion.classList.add('correct');
+                } else {
+                    reviewQuestion.classList.add('incorrect');
+                }
+                
+                // Get the user's answer text
+                let userAnswerText = 'Not answered';
+                if (userAnswer) {
+                    const optionIndex = userAnswer.charCodeAt(0) - 65;
+                    userAnswerText = `${userAnswer}. ${question.options[optionIndex]}`;
+                }
+                
+                // Get the correct answer text
+                const correctOptionIndex = question.shuffledCorrectAnswer.charCodeAt(0) - 65;
+                const correctAnswerText = `${question.shuffledCorrectAnswer}. ${question.options[correctOptionIndex]}`;
+                
+                // Status indicator
+                let statusHTML = '';
+                if (isUnanswered) {
+                    statusHTML = '<span style="color: #f39c12;"><i class="fas fa-question-circle"></i> Unanswered</span>';
+                } else if (isCorrect) {
+                    statusHTML = '<span style="color: #2ecc71;"><i class="fas fa-check-circle"></i> Correct</span>';
+                } else {
+                    statusHTML = '<span style="color: #e74c3c;"><i class="fas fa-times-circle"></i> Incorrect</span>';
+                }
+                
+                reviewQuestion.innerHTML = `
+                    <div class="review-header">
+                        <div><strong>Question ${globalIndex + 1}</strong> (ID: ${question.id})</div>
+                        <div>${statusHTML}</div>
+                    </div>
+                    <div class="mb-10"><strong>Question:</strong> ${question.text}</div>
+                    <div class="mb-10"><strong>Your Answer:</strong> ${userAnswerText}</div>
+                    <div class="mb-10"><strong>Correct Answer:</strong> ${correctAnswerText}</div>
+                    <div><strong>Explanation:</strong> ${question.explanation || 'No explanation available.'}</div>
+                `;
+                
+                reviewQuestions.appendChild(reviewQuestion);
+            });
+            
+            // Generate pagination
+            generatePagination(totalPages);
+            
+            // Scroll to top of review section
+            reviewSection.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function generatePagination(totalPages) {
+            reviewPagination.innerHTML = '';
+            
+            if (totalPages <= 1) return;
+            
+            // Previous button
+            if (currentReviewPage > 1) {
+                const prevBtn = document.createElement('button');
+                prevBtn.className = 'page-btn';
+                prevBtn.innerHTML = '<i class="fas fa-chevron-left"></i>';
+                prevBtn.title = 'Previous page';
+                prevBtn.addEventListener('click', () => {
+                    currentReviewPage--;
+                    displayFilteredReviewQuestions();
+                });
+                reviewPagination.appendChild(prevBtn);
+            }
+            
+            // Page numbers
+            const maxVisiblePages = 5;
+            let startPage = Math.max(1, currentReviewPage - Math.floor(maxVisiblePages / 2));
+            let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+            
+            // Adjust if we're near the end
+            if (endPage - startPage + 1 < maxVisiblePages) {
+                startPage = Math.max(1, endPage - maxVisiblePages + 1);
+            }
+            
+            for (let i = startPage; i <= endPage; i++) {
+                const pageBtn = document.createElement('button');
+                pageBtn.className = 'page-btn';
+                if (i === currentReviewPage) {
+                    pageBtn.classList.add('active');
+                }
+                pageBtn.textContent = i;
+                pageBtn.addEventListener('click', () => {
+                    currentReviewPage = i;
+                    displayFilteredReviewQuestions();
+                });
+                reviewPagination.appendChild(pageBtn);
+            }
+            
+            // Next button
+            if (currentReviewPage < totalPages) {
+                const nextBtn = document.createElement('button');
+                nextBtn.className = 'page-btn';
+                nextBtn.innerHTML = '<i class="fas fa-chevron-right"></i>';
+                nextBtn.title = 'Next page';
+                nextBtn.addEventListener('click', () => {
+                    currentReviewPage++;
+                    displayFilteredReviewQuestions();
+                });
+                reviewPagination.appendChild(nextBtn);
+            }
+        }
+        
+        function downloadReview() {
+            // Create review content for download
+            let reviewContent = `Scholar's Camp Chemistry CBT - Exam Review\n`;
+            reviewContent += `Student: ${currentUser ? currentUser.name : 'Unknown'}\n`;
+            reviewContent += `Date: ${new Date().toLocaleDateString()}\n`;
+            reviewContent += `Score: ${currentExam.score}/${currentExam.questions.length} (${Math.round((currentExam.score / currentExam.questions.length) * 100)}%)\n`;
+            reviewContent += `\n=== COMPLETE EXAM REVIEW ===\n\n`;
+            
+            currentExam.questions.forEach((question, index) => {
+                const userAnswer = currentExam.answers[index];
+                const isCorrect = userAnswer === question.shuffledCorrectAnswer;
+                const isUnanswered = !userAnswer;
+                
+                reviewContent += `QUESTION ${index + 1} (ID: ${question.id})\n`;
+                reviewContent += `Status: ${isUnanswered ? 'UNANSWERED' : (isCorrect ? 'CORRECT' : 'INCORRECT')}\n`;
+                reviewContent += `Question: ${question.text}\n`;
+                
+                // Options
+                question.options.forEach((option, optIndex) => {
+                    const optionLetter = String.fromCharCode(65 + optIndex);
+                    reviewContent += `  ${optionLetter}. ${option}\n`;
+                });
+                
+                // User's answer
+                if (userAnswer) {
+                    const optionIndex = userAnswer.charCodeAt(0) - 65;
+                    reviewContent += `Your Answer: ${userAnswer}. ${question.options[optionIndex]}\n`;
+                } else {
+                    reviewContent += `Your Answer: Not answered\n`;
+                }
+                
+                // Correct answer
+                const correctOptionIndex = question.shuffledCorrectAnswer.charCodeAt(0) - 65;
+                reviewContent += `Correct Answer: ${question.shuffledCorrectAnswer}. ${question.options[correctOptionIndex]}\n`;
+                
+                // Explanation
+                reviewContent += `Explanation: ${question.explanation || 'No explanation available.'}\n`;
+                reviewContent += `\n${'-'.repeat(50)}\n\n`;
+            });
+            
+            // Summary
+            reviewContent += `\n=== SUMMARY ===\n`;
+            reviewContent += `Total Questions: ${currentExam.questions.length}\n`;
+            reviewContent += `Correct Answers: ${currentExam.score}\n`;
+            reviewContent += `Incorrect Answers: ${Object.keys(currentExam.answers).length - currentExam.score}\n`;
+            reviewContent += `Unanswered: ${currentExam.questions.length - Object.keys(currentExam.answers).length}\n`;
+            reviewContent += `Percentage: ${Math.round((currentExam.score / currentExam.questions.length) * 100)}%\n`;
+            
+            // Create and download file
+            const blob = new Blob([reviewContent], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Chemistry_Exam_Review_${new Date().toISOString().split('T')[0]}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+        
+        function startNewAttempt() {
+            if (confirm('Start a new exam attempt? Your current results will be saved.')) {
+                // Reset exam state
+                currentExam = {
+                    questions: [],
+                    currentQuestionIndex: 0,
+                    answers: {},
+                    startTime: null,
+                    endTime: null,
+                    submitted: false,
+                    score: 0
+                };
+                
+                // Reset review state
+                currentReviewFilter = 'all';
+                currentReviewPage = 1;
+                
+                // Show exam info screen
+                resultsScreen.classList.add('hidden');
+                reviewSection.classList.add('hidden');
+                examInfo.classList.remove('hidden');
+                
+                // Reset timer
+                timeRemaining = examDuration;
+                timerElement.classList.remove('timer-warning', 'timer-danger');
+            }
+        }
+        
+        function toggleScrollTopButton() {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.remove('hidden');
+            } else {
+                scrollTopBtn.classList.add('hidden');
+            }
+        }
+        
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        
+        // Initialize the application when page loads
+        window.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
